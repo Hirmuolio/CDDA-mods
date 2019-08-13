@@ -1,0 +1,124 @@
+[
+  {
+    "type" : "ammunition_type",
+    "id" : "338",
+    "name" : ".338 Lapua Magnum",
+    "default" : "338magnum"
+  },
+  {
+    "id": "338magnum",
+    "type": "AMMO",
+    "name": ".338 Lapua Magnum",
+    "description": ".338 Lapua Magnum.",
+    "weight": 18,
+    "volume": 1,
+    "price": 2200,
+    "material": [ "brass", "powder" ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "338",
+    "casing": "338_casing",
+    "range": 65,
+    "damage": 70,
+    "pierce": 8,
+    "dispersion": 15,
+    "recoil": 5000,
+    "effects": [ "COOKOFF" ]
+  },
+  {
+    "id": "reloaded_338magnum",
+    "copy-from": "338magnum",
+    "type": "AMMO",
+    "name": "reloaded .338 Lapua Magnum",
+    "proportional": { "price": 0.7, "damage": 0.9, "dispersion": 1.1 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "effects": [ "NEVER_MISFIRES" ] }
+  },
+  {
+    "id": "338_casing",
+    "copy-from": "casing",
+    "type": "GENERIC",
+    "name": ".338 casing",
+    "description": "An empty casing from a .338 round.",
+    "weight": 5,
+    "volume": "5ml"
+  },
+  {
+    "id": "belt762R",
+    "copy-from": "magazine_belt",
+    "type": "MAGAZINE",
+    "name": "ammo belt 7.62x54R",
+    "ammo_type": "762R",
+    "capacity": 500,
+    "count": 100,
+    "default_ammo": "762_54R",
+    "linkage": "ammolink762R"
+  },
+  {
+    "id": "ammolink762R",
+    "copy-from": "ammolink",
+    "type": "GENERIC",
+    "name": "7.62x54R ammo belt linkage",
+    "use_action": {
+      "type": "ammobelt",
+      "belt": "belt762R"
+    }
+  },
+  {
+    "id": "338_casing",
+    "copy-from": "casing",
+    "type": "GENERIC",
+    "name": ".338 casing",
+    "description": "An empty casing from a .338 round.",
+    "weight": 5,
+    "volume": "5ml"
+  },
+  {
+    "id": "belt762",
+    "copy-from": "magazine_belt",
+    "type": "MAGAZINE",
+    "name": "ammo belt 7.62x39",
+    "ammo_type": "762",
+    "capacity": 500,
+    "count": 100,
+    "default_ammo": "762_m87",
+    "linkage": "ammolink762"
+  },
+  {
+    "id": "ammolink762",
+    "copy-from": "ammolink",
+    "type": "GENERIC",
+    "name": "7.62x39 ammo belt linkage",
+    "use_action": {
+      "type": "ammobelt",
+      "belt": "belt762"
+    }
+  },
+  {
+    "type" : "AMMO",
+    "id" : "150mm_HEAT",
+    "price" : 0,
+    "name" : "150mm HEAT",
+    "symbol" : "=",
+    "color" : "dark_gray",
+    "description" : "A 150mm high-explosive guided anti-tank round.",
+    "material" : ["steel", "powder"],
+    "volume" : 1,
+    "weight" : 1803,
+    "ammo_type" : "150mm",
+    "damage" : 4500,
+    "pierce" : 600,
+    "range" : 90,
+    "dispersion" : 10,
+    "recoil" : 225,
+    "effects" : ["COOKOFF", "EXPLOSIVE", "TRAIL"]
+  },
+  {
+    "type" : "ammunition_type",
+    "id" : "150mm",
+    "name" : "high-explosive anti-tank warhead",
+    "default" : "150mm_HEAT"
+  }
+]

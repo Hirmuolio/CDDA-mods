@@ -1,0 +1,182 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_tree_spruce",
+    "name": "spruce tree",
+    "description": "A spruce tree.",
+    "symbol": "4",
+    "color": "green",
+	"looks_like": "t_tree",
+    "move_cost": 0,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT" ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "stick_long", "count": [ 3, 10 ] }, { "item": "splinter", "count": [ 10, 25 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_sorbus",
+    "name": "Sorbus",
+    "description": "A bush-like tree which bears bitter berries late in the summer.",
+    "symbol": "7",
+    "color": [ "light_green", "light_green", "red_green", "brown" ],
+    "//": "barren in winter, fruits in autumn",
+    "move_cost": 0,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT" ],
+    "transforms_into": "t_sorbus_harvested",
+    "examine_action": "harvest_ter_nectar",
+    "harvest_by_season": [ 
+	  { 
+	  "seasons": [ "autumn" ],
+	  "entries": [ { "drop": "sorbus", "base_num": [ 2, 5 ], "scaled_num": [ 0, 0.5 ] } ] 
+	  } 
+	],
+    "bash": {
+      "str_min": 10,
+      "str_max": 90,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "stick_long", "count": [ 2, 8 ] }, { "item": "splinter", "count": [ 10, 25 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_sorbus_harvested",
+    "name": "Sorbus",
+    "description": "A bush-like tree which bears bitter berries late in the summer.",
+    "symbol": "7",
+    "color": [ "light_green", "light_green", "light_green", "brown" ],
+    "//": "barren in winter, no fruits anymore",
+    "move_cost": 0,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "HARVESTED" ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_sorbus",
+    "bash": {
+      "str_min": 10,
+      "str_max": 90,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "stick_long", "count": [ 2, 8 ] }, { "item": "splinter", "count": [ 10, 25 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_shrub_lingonberry",
+    "name": "lingonberry twigs",
+    "description": "A turf of lingonberry twigs.",
+    "symbol": "#",
+    "color": "red",
+    "move_cost": 8,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "SHRUB", "SHORT" ],
+    "transforms_into": "t_shrub_lingonberry_harvested",
+    "examine_action": "harvest_ter_nectar",
+    "looks_like": "t_shrub_strawberry",
+    "harvest_by_season": [
+      {
+        "seasons": [ "autumn" ],
+        "entries": [
+          { "drop": "lingonberry", "base_num": [ 2, 5 ], "scaled_num": [ 0, 0.5 ] }
+        ]
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "withered", "prob": 50, "count": [ 1, 2 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_shrub_lingonberry_harvested",
+    "name": "lingonberry twigs",
+    "description": "A turf of lingonberry twigs. But no berries.",
+    "symbol": "#",
+    "color": "red",
+    "move_cost": 8,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "SHRUB", "SHORT", "HARVESTED" ],
+    "transforms_into": "t_shrub_lingonberry",
+    "examine_action": "harvested_plant",
+    "looks_like": "t_shrub_strawberry",
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "withered", "prob": 50, "count": [ 1, 2 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_shrub_cloudberry",
+    "name": "cloudberry cluster",
+    "description": "A cluster of lingonberries.",
+    "symbol": "#",
+    "color": "orange",
+    "move_cost": 8,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "SHRUB", "SHORT" ],
+    "transforms_into": "t_shrub_cloudberry_harvested",
+    "examine_action": "harvest_ter_nectar",
+    "looks_like": "t_shrub_strawberry",
+    "harvest_by_season": [
+      {
+        "seasons": [ "autumn" ],
+        "entries": [
+          { "drop": "cloudberry", "base_num": [ 2, 5 ], "scaled_num": [ 0, 0.5 ] }
+        ]
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "withered", "prob": 50, "count": [ 1, 2 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_shrub_cloudberry_harvested",
+    "name": "cloudberry twigs",
+    "description": "A cluster of lingonberries. But no berries.",
+    "symbol": "#",
+    "color": "orange",
+    "move_cost": 8,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "SHRUB", "SHORT", "HARVESTED" ],
+    "transforms_into": "t_shrub_cloudberry",
+    "examine_action": "harvested_plant",
+    "looks_like": "t_shrub_strawberry",
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "withered", "prob": 50, "count": [ 1, 2 ] } ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_reed",
+    "name": "reed",
+    "symbol": "i",
+    "color": [ "light_green", "light_green", "brown", "brown" ],
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE" ],
+    "examine_action": "harvest_furn",
+    "bash": { "str_min": 2, "str_max": 6, "sound": "crunch.", "sound_fail": "whish." },
+	"description": ""
+  }
+]

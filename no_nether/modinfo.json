@@ -1,0 +1,21 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "No_Fungi",
+    "name": "No nether creatures",
+    "authors": [ "Hirmuolio" ],
+    "description": "Removes nether creatures.",
+    "category": "monster_exclude",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "MONSTER_BLACKLIST",
+    "categories": [ "NETHER" ]
+  },
+  {
+    "type": "region_overlay",
+    "id": "No_nether_region_overlay",
+    "regions": [ "all" ],
+    "overmap_feature_flag_settings": { "blacklist": [ "NETHER" ] }
+  }
+]

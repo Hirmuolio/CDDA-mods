@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "vertakoski",
+    "name": "Vertakoski",
+    "description": "Zombies in Finland.",
+	"category": "World",
+    "dependencies": [ "dda" ],
+	"author": "Hirmuolio"
+  }
+]
