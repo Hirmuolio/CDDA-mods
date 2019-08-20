@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "wild_zombies",
+    "name": "Wilderness Zombies",
+    "description": "Zombie apocalypse also happened in wilderness.",
+	"category": "World",
+    "dependencies": [ "dda" ],
+	"author": "Hirmuolio"
+  }
+]
