@@ -1,7 +1,7 @@
 [
   {
     "type": "MOD_INFO",
-    "ident": "No_Fungi",
+    "ident": "no_nether",
     "name": "No nether creatures",
     "authors": [ "Hirmuolio" ],
     "description": "Removes nether creatures.",
@@ -11,6 +11,16 @@
   {
     "type": "MONSTER_BLACKLIST",
     "categories": [ "NETHER" ]
+  },
+  {
+    "type": "MONSTER_BLACKLIST",
+    "monsters": [
+      "mon_mi_go_scout",
+	  "mon_mi_go_myrmidon",
+	  "mon_mi_go",
+	  "mon_mi_go_surgeon",
+	  "mon_mi_go_guard"
+    ]
   },
   {
     "type": "region_overlay",
