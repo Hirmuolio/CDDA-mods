@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mac_10",
+    "copy-from": "mac_10",
+    "type": "GUN",
+    "name": "MAC-11 (.380)"
+  },
+  {
+    "id": "kp3at",
+    "copy-from": "kp3at",
+    "type": "GUN",
+    "name": "Kel-Tec P3AT (.380)"
+  },
+  {
+    "id": "rugerlcp",
+    "copy-from": "rugerlcp",
+    "type": "GUN",
+    "name": "Ruger LCP (.380)"
+  },
+  {
+    "id": "hptcf380",
+    "copy-from": "hptcf380",
+    "type": "GUN",
+    "name": "Hi-Point CF-380 (.380)"
+  }
+]
