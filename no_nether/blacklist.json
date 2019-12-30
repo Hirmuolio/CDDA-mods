@@ -1,0 +1,47 @@
+[
+  {
+    "type": "MONSTER_BLACKLIST",
+    "categories": [ "NETHER" ]
+  },
+  {
+    "type": "region_overlay",
+    "id": "No_nether_region_overlay",
+    "regions": [ "all" ],
+    "overmap_feature_flag_settings": { "blacklist": [ "NETHER" ] }
+  },
+  {
+    "type": "MONSTER_BLACKLIST",
+    "monsters": [
+      "mon_gelatin",
+	  "mon_gracke",
+	  "mon_headless_dog_thing",
+	  "mon_hound_tindalos",
+	  "mon_hound_tindalos_afterimage",
+	  "mon_hunting_horror",
+	  "mon_kreck",
+	  "mon_shadow",
+	  "mon_shadow_snake",
+	  "mon_shoggoth",
+	  "mon_thing",
+	  "mon_yugg",
+	  "mon_albino_penguin",
+	  "mon_blank",
+	  "mon_blob",
+	  "mon_blob_brain",
+	  "mon_blob_large",
+	  "mon_blob_small",
+	  "mon_breather",
+	  "mon_breather_hub",
+	  "mon_darkman",
+	  "mon_dog_thing",
+	  "mon_flaming_eye",
+	  "mon_flying_polyp",
+	  "mon_gozu",
+	  "mon_mi_go_scout",
+	  "mon_mi_go_myrmidon",
+	  "mon_mi_go",
+	  "mon_mi_go_surgeon",
+	  "mon_mi_go_guard"
+    ]
+  }
+]

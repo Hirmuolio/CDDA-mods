@@ -4,28 +4,8 @@
     "ident": "no_nether",
     "name": "No nether creatures",
     "authors": [ "Hirmuolio" ],
-    "description": "Removes nether creatures.",
+    "description": "Removes nether creatures. Their spawns are replaced by zombies.",
     "category": "monster_exclude",
     "dependencies": [ "dda" ]
-  },
-  {
-    "type": "MONSTER_BLACKLIST",
-    "categories": [ "NETHER" ]
-  },
-  {
-    "type": "MONSTER_BLACKLIST",
-    "monsters": [
-      "mon_mi_go_scout",
-	  "mon_mi_go_myrmidon",
-	  "mon_mi_go",
-	  "mon_mi_go_surgeon",
-	  "mon_mi_go_guard"
-    ]
-  },
-  {
-    "type": "region_overlay",
-    "id": "No_nether_region_overlay",
-    "regions": [ "all" ],
-    "overmap_feature_flag_settings": { "blacklist": [ "NETHER" ] }
   }
 ]
